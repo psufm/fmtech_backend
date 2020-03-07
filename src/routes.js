@@ -1,12 +1,12 @@
 // Global
 const HOME = "/";
-const JOIN = "/join";
 const LOGIN = "/login";
 const LOGOUT = "/logout";
+const GOOGLE = "/google";
 
 const routes = {
   home: HOME,
-  join: JOIN,
+  google: GOOGLE,
   login: LOGIN,
   logout: LOGOUT
 };

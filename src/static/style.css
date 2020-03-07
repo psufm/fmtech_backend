@@ -1,0 +1,157 @@
+* {
+  font-family: "Noto Sans KR", sans-serif;
+  color: #3f3f3f;
+}
+
+body {
+  background-color: #f3f3f3;
+  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 12px;
+  width: 18%;
+  z-index: 10;
+}
+
+.logo > img {
+  width: 100%;
+  height: auto;
+}
+
+.contents {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
+  overflow: hidden;
+}
+
+.contents video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1000;
+  overflow: hidden;
+}
+
+.contents .description {
+  position: absolute;
+  top: 50%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  font-weight: 100;
+  white-space: nowrap;
+  line-height: 1.15;
+}
+
+.contents .description .title {
+  font-size: 2.4em;
+}
+
+.contents .description .text {
+  font-size: 1.5em;
+  margin-top: 12px;
+}
+
+.contents .description span {
+  font-weight: 700;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px;
+  font-size: 0.8em;
+  font-weight: 100;
+  text-align: right;
+  z-index: 10;
+}
+
+footer div:nth-child(n + 2) {
+  margin-left: 24px;
+}
+
+.footer_logo {
+  letter-spacing: 1px;
+}
+
+footer div > span {
+  font-weight: 500;
+}
+
+.copyright {
+  font-size: 0.6em;
+}
+
+@media (max-width: 1024px) {
+  .logo {
+    width: 25%;
+  }
+
+  .contents .description {
+    left: 60%;
+  }
+
+  .contents .description .title {
+    font-size: 2em;
+  }
+
+  .contents .description .text {
+    font-size: 1.2em;
+    margin-top: 8px;
+  }
+}
+
+@media (max-width: 640px) {
+  footer {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  footer div:nth-child(n + 2) {
+    margin-left: 0;
+    margin-top: 12px;
+  }
+
+  .logo {
+    width: 50%;
+  }
+
+  .contents .description {
+    left: 50%;
+    text-align: center;
+    white-space: normal;
+    width: 65%;
+    word-break: keep-all;
+  }
+
+  .contents .description .title {
+    font-size: 1.6em;
+  }
+
+  .contents .description .text {
+    font-size: 1em;
+  }
+
+  footer {
+    font-size: 0.65em;
+  }
+
+  .copyright {
+    font-size: 0.5em;
+  }
+}

@@ -1,9 +1,10 @@
 import express from "express";
 import routes from "../routes";
-import { googleLogin } from "../controller/loginController";
+import { googleLogin, loginCallback } from "../controller/loginController";
 
-const globalRouter = express.Router();
+const loginRouter = express.Router();
 
-globalRouter.get(routes.google, googleLogin);
+loginRouter.get(routes.google, googleLogin);
+loginRouter.get(routes.callback, loginCallback);
 
-export default globalRouter;
+export default loginRouter;

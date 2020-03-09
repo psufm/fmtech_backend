@@ -1,5 +1,10 @@
 import mongoose from "mongoose";
-mongoose.connect(process.env.MONGO_URL, {
+import dotenv from "dotenv";
+dotenv.config();
+console.log(process.env.MONGO_URL);
+
+const url = process.env.MONGO_URL;
+mongoose.connect(url, {
   useNewUrlParser: true,
   useFindAndModify: false
 });

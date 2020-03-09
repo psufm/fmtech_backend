@@ -4,7 +4,7 @@ import { googleLogin, loginCallback } from "../controller/loginController";
 
 const loginRouter = express.Router();
 
-loginRouter.get(routes.google, googleLogin);
 loginRouter.get(routes.callback, loginCallback);
+loginRouter.get(routes.google, googleLogin);
 
 export default loginRouter;
